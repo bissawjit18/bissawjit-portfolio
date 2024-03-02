@@ -15,9 +15,10 @@
     <!-- External css -->
     <link rel="stylesheet" href="style.css">
     <style>
-        body{
+        body {
             background-color: #fff;
         }
+
         /* html{
             scroll-behavior: smooth;
         } */
@@ -47,12 +48,11 @@
                         </ul>
                     </div>
                     <div class="flex flex-row items-center">
-                        <a href="" title="BISSAWJIT"><img class="w-[50px] h-[50px] " src="resources/Logo.png"
-                                alt="">
-                                <a class="cursor-pointer text-orange-400 text-4xl font-bold" title="BISSAWJIT">
-                                    BISSAWJIT
-                                </a>
+                        <a href="" title="BISSAWJIT"><img class="w-[50px] h-[50px] " src="resources/Logo.png" alt="">
+                            <a class="cursor-pointer text-orange-400 text-4xl font-bold" title="BISSAWJIT">
+                                BISSAWJIT
                             </a>
+                        </a>
                     </div>
 
                 </div>
@@ -66,7 +66,9 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a href="#contact" class="btn border-none text-[#010313] text-opacity-70 bg-[#FB923C] lg:border-[1px]  hover:border-orange-400 bg-opacity-40  hover:text-orange-400 font-extrabold transition-colors duration-700">Hire Me</a>
+                    <a href="#contact"
+                        class="btn border-none text-[#010313] text-opacity-70 bg-[#FB923C] lg:border-[1px]  hover:border-orange-400 bg-opacity-40  hover:text-orange-400 font-extrabold transition-colors duration-700">Hire
+                        Me</a>
                 </div>
             </div>
         </nav>
@@ -78,7 +80,7 @@
                 <h3 class="text-3xl">I'am a Web Developer.</h3>
 
             </div>
-            <div class="flex justify-end">
+            <div class="flex justify-center lg:justify-end">
                 <img class="w-[400px]  rounded-2xl" src="resources/user.png" alt="">
             </div>
         </div>
@@ -89,14 +91,15 @@
         <section id="contact" class=" scroll-smooth bg-purple-200 my-16">
             <div class="text-center">
                 <h2 class="text-black text-3xl font-extrabold pt-10">Contact with Me </h2>
-                
+
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 justify-around ">
                 <!-- left side -->
-                <div class="flex flex-col gap-10 justify-center items-center lg:items-start py-16 lg:ml-24"> 
+                <div class="flex flex-col gap-10 justify-center items-center lg:items-start py-16 lg:ml-24">
                     <!-- address -->
                     <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-left">
-                        <div><i class="fa-solid fa-location-dot text-2xl text-red-500 p-5 bg-red-200 rounded-full"></i></div>
+                        <div><i class="fa-solid fa-location-dot text-2xl text-red-500 p-5 bg-red-200 rounded-full"></i>
+                        </div>
                         <div>
                             <h2 class="text-black text-xl font-semibold mt-2">Address</h2>
                             <P class="text-gray-500 mt-1">Thakurgaon, Bangladesh</P>
@@ -104,7 +107,8 @@
                     </div>
                     <!-- email -->
                     <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-left">
-                        <div><i class="fa-solid fa-envelope text-2xl text-pink-500 p-5 bg-pink-200 rounded-full"></i></div>
+                        <div><i class="fa-solid fa-envelope text-2xl text-pink-500 p-5 bg-pink-200 rounded-full"></i>
+                        </div>
                         <div>
                             <h2 class="text-black text-xl font-semibold mt-2">E-mail</h2>
                             <P class="text-gray-500 mt-1">bissawjit09@gmail.com</P>
@@ -112,7 +116,8 @@
                     </div>
                     <!-- phone -->
                     <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-left">
-                        <div><i class="fa-solid fa-phone text-2xl text-green-500 p-5 bg-green-100 rounded-full"></i></div>
+                        <div><i class="fa-solid fa-phone text-2xl text-green-500 p-5 bg-green-100 rounded-full"></i>
+                        </div>
                         <div>
                             <h2 class="text-black text-xl font-semibold mt-2">Phone</h2>
                             <P class="text-gray-500 mt-1 ">+8801737638839</P>
@@ -121,20 +126,33 @@
                 </div>
                 <!-- right side -->
                 <div class=" mx-auto grid grid-cols-1 gap-5  py-16">
-                    <form action="" class=" grid grid-cols-1 gap-5 w-[400px]">
-                        <input class="py-2 px-3 rounded-lg outline-none bg-white" type="text" name="" id="name" placeholder="Enter your name" required>
-                        <input class="py-2 px-3 rounded-lg outline-none bg-white" type="email" name="" id="name" placeholder="Enter your E-mail" required>
-                        <select class="py-2 px-3 rounded-lg bg-white" required>
+                    <form action="https://api.web3forms.com/submit" method="POST"
+                        class=" grid grid-cols-1 gap-5 w-[400px]">
+                        <div>
+                            <h2 class="text-2xl font-bold lg:text-3xl text-[#0f0f0f] ">Get in touch</h2>
+                        </div>
+
+                        <!-- Replace with your Access Key -->
+                        <input type="hidden" name="access_key" value="39d49823-02ec-4006-aece-3c41cf4ff824">
+
+                        <input class="py-2 px-3 rounded-lg outline-none bg-white" type="text" name="name" id="name"
+                            placeholder="Enter your name" required>
+                        <input class="py-2 px-3 rounded-lg outline-none bg-white" type="email" name="email" id="name"
+                            placeholder="Enter your E-mail" required>
+                        <select name="Services" class="py-2 px-3 rounded-lg bg-white" required>
                             <option value="">Select a service</option>
-                            <option value="">Web Design</option>
-                            <option value="">Web Development</option>
-                            <option value="">App Development</option>
+                            <option value="Web Design">Web Design</option>
+                            <option value="Web Development">Web Development</option>
+                            <option value="App Development">App Development</option>
                         </select>
 
-                        <textarea class="py-2 px-3 rounded-lg outline-none bg-white" id="textarea" cols="20" rows="4" placeholder="Write your message.." required></textarea>
-                        
-                        <input class="cursor-pointer rounded-xl py-2 w-[150px] bg-[#f9004d] text-white font-bold " type="button" value="Send">
-                        
+                        <textarea class="py-2 px-3 rounded-lg outline-none bg-white" name="message" id="textarea" cols="20" rows="4"
+                            placeholder="Write your message.." required></textarea>
+
+                        <input
+                            class="cursor-pointer rounded-xl py-2 w-[150px] bg-gradient-to-r from-[#f9004d] to-[#fc09db]  text-white font-bold "
+                            type="submit" value="Send">
+
                     </form>
 
                 </div>
