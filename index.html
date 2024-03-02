@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" overflow-auto scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,22 +12,22 @@
 
     <!-- font awesome icon  -->
     <script src="https://kit.fontawesome.com/c25e1ed245.js" crossorigin="anonymous"></script>
+    <!-- External css -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        body{
+            background-color: #fff;
         }
-
-        body {
-            background-color: #cdcccc;
-        }
+        /* html{
+            scroll-behavior: smooth;
+        } */
     </style>
 </head>
 
 <body>
     <header>
-        <nav>
-            <div class="navbar bg-base-100">
+        <nav class="bg-white">
+            <div class="navbar bg-white-500 shadow-xl lg:px-8 ">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -46,9 +47,14 @@
                         </ul>
                     </div>
                     <div class="flex flex-row items-center">
-                        <a href=""><img class="w-[50px] h-[50px] " src="resources/Logo.png" alt=""></a>
+                        <a href="" title="BISSAWJIT"><img class="w-[50px] h-[50px] " src="resources/Logo.png"
+                                alt="">
+                                <a class="cursor-pointer text-orange-400 text-4xl font-bold" title="BISSAWJIT">
+                                    BISSAWJIT
+                                </a>
+                            </a>
                     </div>
-                    
+
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 font-medium">
@@ -56,24 +62,92 @@
                         <li><a>About</a></li>
                         <li><a>Services</a></li>
                         <li><a>Projects</a></li>
-                        <li><a>Contact</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class=""><img class="w-[50px] rounded-[50px] border-2" src="resources/user.png" alt=""></a>
+                    <a href="#contact" class="btn border-none text-[#010313] text-opacity-70 bg-[#FB923C] lg:border-[1px]  hover:border-orange-400 bg-opacity-40  hover:text-orange-400 font-extrabold transition-colors duration-700">Hire Me</a>
                 </div>
             </div>
         </nav>
+        <!-- banner container  -->
+        <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 justify-center items-center mt-5 lg:mr-3">
+            <div class="banner-content font-semibold mx-10 flex flex-col justify-items-center">
+                <h4 class=" text-3xl">Hello, My name is </h4>
+                <h1 class="text-cyan-800 text-4xl my-4">Bissawjit <span class="text-orange-400">Chandraw</span></h1>
+                <h3 class="text-3xl">I'am a Web Developer.</h3>
+
+            </div>
+            <div class="flex justify-end">
+                <img class="w-[400px]  rounded-2xl" src="resources/user.png" alt="">
+            </div>
+        </div>
+
     </header>
     <main>
+        <!-- contact section -->
+        <section id="contact" class=" scroll-smooth bg-purple-200 my-16">
+            <div class="text-center">
+                <h2 class="text-black text-3xl font-extrabold pt-10">Contact with Me </h2>
+                
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 justify-around ">
+                <!-- left side -->
+                <div class="flex flex-col gap-10 justify-center items-center lg:items-start py-16 lg:ml-24"> 
+                    <!-- address -->
+                    <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-left">
+                        <div><i class="fa-solid fa-location-dot text-2xl text-red-500 p-5 bg-red-200 rounded-full"></i></div>
+                        <div>
+                            <h2 class="text-black text-xl font-semibold mt-2">Address</h2>
+                            <P class="text-gray-500 mt-1">Thakurgaon, Bangladesh</P>
+                        </div>
+                    </div>
+                    <!-- email -->
+                    <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-left">
+                        <div><i class="fa-solid fa-envelope text-2xl text-pink-500 p-5 bg-pink-200 rounded-full"></i></div>
+                        <div>
+                            <h2 class="text-black text-xl font-semibold mt-2">E-mail</h2>
+                            <P class="text-gray-500 mt-1">bissawjit09@gmail.com</P>
+                        </div>
+                    </div>
+                    <!-- phone -->
+                    <div class="flex flex-col lg:flex-row gap-3 text-center lg:text-left">
+                        <div><i class="fa-solid fa-phone text-2xl text-green-500 p-5 bg-green-100 rounded-full"></i></div>
+                        <div>
+                            <h2 class="text-black text-xl font-semibold mt-2">Phone</h2>
+                            <P class="text-gray-500 mt-1 ">+8801737638839</P>
+                        </div>
+                    </div>
+                </div>
+                <!-- right side -->
+                <div class=" mx-auto grid grid-cols-1 gap-5  py-16">
+                    <form action="" class=" grid grid-cols-1 gap-5 w-[400px]">
+                        <input class="py-2 px-3 rounded-lg outline-none bg-white" type="text" name="" id="name" placeholder="Enter your name" required>
+                        <input class="py-2 px-3 rounded-lg outline-none bg-white" type="email" name="" id="name" placeholder="Enter your E-mail" required>
+                        <select class="py-2 px-3 rounded-lg bg-white" required>
+                            <option value="">Select a service</option>
+                            <option value="">Web Design</option>
+                            <option value="">Web Development</option>
+                            <option value="">App Development</option>
+                        </select>
 
+                        <textarea class="py-2 px-3 rounded-lg outline-none bg-white" id="textarea" cols="20" rows="4" placeholder="Write your message.." required></textarea>
+                        
+                        <input class="cursor-pointer rounded-xl py-2 w-[150px] bg-[#f9004d] text-white font-bold " type="button" value="Send">
+                        
+                    </form>
+
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="text-[#cccccc] ">
+
+    <footer class=" text-[#cccccc] ">
         <div class=" grid grid-cols-1 lg:grid-cols-3 lg:gap-10 bg-[#010313] px-4 py-2 lg:px-20 lg:py-12 ">
             <!-- col 1 -->
             <div class="flex flex-col items-center lg:items-start ">
                 <a href=""><img class="w-[150px] h-[100px] ml-8" src="resources/Logo.png" alt=""></a>
-                <h2 class="text-yellow-600 text-4xl font-bold mb-5 lg:ml-3">BISSAWJIT</h2>
+                <h2 class="text-orange-400 text-4xl font-bold mb-5 lg:ml-3">BISSAWJIT</h2>
                 <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum vitae
                     consectetur distinctio atque soluta, necessitatibus quia aliquid autem earum facere, corporis quas
                     saepe? Dolorem aperiam eligendi officia dolore iste quo!Lorem ipsum dolor sit amet consectetur
@@ -83,25 +157,25 @@
             <!-- col 2 -->
             <div class="text-center lg:text-left lg:ml-16">
                 <P class="text-3xl font-semibold mt-5 mb-8"><a>MENU BARS</a></P>
-                <P class="text-lg font-medium mt-4 "><a>Services</a></P>
-                <P class="text-lg font-medium mt-4 "><a>Projects</a></P>
-                <P class="text-lg font-medium mt-4 "><a>Blogs</a></P>
-                <P class="text-lg font-medium mt-4 "><a>Privacy Policy</a></P>
-                <P class="text-lg font-medium mt-4 "><a>Contact Me</a></P>
+                <P class="text-lg font-medium mt-4 "><a class="cursor-pointer ">Services</a></P>
+                <P class="text-lg font-medium mt-4 "><a class="cursor-pointer ">Projects</a></P>
+                <P class="text-lg font-medium mt-4 "><a class="cursor-pointer ">Blogs</a></P>
+                <P class="text-lg font-medium mt-4 "><a class="cursor-pointer ">Privacy Policy</a></P>
+                <P class="text-lg font-medium mt-4 "><a href="#contact" class="cursor-pointer ">Contact Me</a></P>
             </div>
             <!-- col 3 -->
             <div class="text-center lg:text-left mt-2">
                 <h2 class="text-3xl font-semibold mt-6 lg:mt-5 mb-5 lg:mb-8">CONTACT INFO</h2>
-                <p class="text-lg font-medium mt-1 ">Phone: +88017*******</p>
+                <p class="text-lg font-medium mt-1 ">Phone: +88017********</p>
                 <p class="text-lg font-medium mt-1 ">E-mail: bissawjit09@gmail.com</p>
                 <p class="text-lg font-medium mt-1 ">Address: Thakurgaon, Bangladesh</p>
 
                 <h2 class="text-3xl font-semibold mt-5 mb-5">FOLLOW ME</h2>
                 <P>
-                    <a class="mr-3 " href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
-                    <a class="mr-3 " href=""><i class="fa-brands fa-linkedin text-2xl"></i></i></a>
-                    <a class="mr-3 " href=""><i class="fa-brands fa-github text-2xl"></i></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter text-2xl"></i></i></a>
+                    <a class="mr-3" title="Facebook" href=""><i class="fa-brands fa-facebook text-2xl"></i></a>
+                    <a class="mr-3 " title="LinkedIn" href=""><i class="fa-brands fa-linkedin text-2xl"></i></i></a>
+                    <a class="mr-3 " title="GitHub" href=""><i class="fa-brands fa-github text-2xl"></i></i></a>
+                    <a href="" title="twitter-x"><i class="fa-brands fa-x-twitter text-2xl"></i></i></a>
                 </P>
             </div>
         </div>
